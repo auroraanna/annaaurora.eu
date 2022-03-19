@@ -103,7 +103,7 @@ favicon = "logos/icon.svg"
 # og_preview_img = ""
 
 # Copyright notice if desired. Defaults to
-copyright = "©️ 2021-2022 papojari"
+copyright = " "
 
 # What is displayed in the top left corner of the website. Default is zerm.
 logo_text = "papojari"
