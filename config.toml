@@ -116,6 +116,7 @@ logo_home_link = "/"
 main_menu = [
   {url="/blog/", name="📜 Blog"},
   {url="/art/", name="🌠 Art portfolio"},
+  {url="/accounts#contact", name="👋 Contact"},
 ]
 
 # Displayed as title of drop-down menu when size of main_menu > show_menu_items.
