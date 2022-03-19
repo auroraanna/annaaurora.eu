@@ -111,6 +111,12 @@ logo_text = "papojari"
 # Link in logo. Default returns you to $BASE_URL.
 logo_home_link = "/"
 
+# Menu items to display. You define a url and the name of the menu item.
+# NOTE: `$BASE_URL/` must be included in the url name.
+main_menu = [
+  {url="/art/", name="🌠 Art portfolio"},
+]
+
 # Displayed as title of drop-down menu when size of main_menu > show_menu_items.
 menu_more = "Show more"
 
