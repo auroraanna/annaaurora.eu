@@ -1,0 +1,3 @@
+[submodule "themes/merm"]
+	path = themes/merm
+	url = git@codeberg.org:papojari/merm.git
