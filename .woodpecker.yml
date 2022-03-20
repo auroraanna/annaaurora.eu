@@ -15,7 +15,10 @@ pipeline:
       - git config --global user.name "Codeberg CI"
       # deploy changes
       - git clone https://"$${ACCESS_TOKEN}"@codeberg.org/papojari/pages.git /pages
+      - cp -r /pages/find-billy ../
       - rsync -r --delete --exclude-from=".rsyncignore" public/ /pages
+      - rm -rf /pages/find-billy
+      - cp -r ../find-billy /pages/
       - cp content/License.md /pages/LICENSE.md
       - cd /pages
       - git add -A
