@@ -37,29 +37,6 @@ nix-uninstall-deps:
 		nix-env -e $package_name
 	done
 
-installing and uninstalling dependencies)
-	#!/bin/sh
-	set -euxo pipefail
-	# Serve Website
-	zola serve
-	for package_name in {{NIXPKGS_DEPS}}; do
-		nix-env -iA nixpkgs.$package_name
-	done
-
-nixos-install-deps:
-	#!/bin/sh
-	set -euxo pipefail
-	for package_name in {{NIXPKGS_DEPS}}; do
-		nix-env -iA nixos.$package_name
-	done
-
-nix-uninstall-deps:
-	#!/bin/sh
-	set -euxo pipefail
-	for package_name in {{NIXPKGS_DEPS}}; do
-		nix-env -e $package_name
-	done
-
 git-download-submodules:
 	@git submodule update --init --recursive
 
