@@ -34,7 +34,8 @@
         {{ page.content | safe }}
 
         <img src="lossy.webp">
-        <a href="lossless.webp">lossless image</a></img>
+            <a href="lossless.webp">lossless image</a>
+        </img>
 
         <p>
             <table>
@@ -53,6 +54,5 @@
 
         {{ comments::comments() }}
         {# TODO: Decide if any sort of commenting functionality is desired? #}
-        {#%- include "snippets/comments.html"  -%#}
-    </article>
+        {#%- include "snippets/comments.html"  -%#}    </article>
 {%- endblock main -%}
