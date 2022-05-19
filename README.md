@@ -40,7 +40,7 @@ Note that the lossy artwork images are missing when serving because I thought it
 just build
 ```
 
-This lets Zola compile the website and then checks if any of the lossless artwork images have changed. If they have the lossy images are regenerated. The lossy images obviously don't need to be regenerated if nothing changed.
+This lets Zola compile the website and then regenerates the lossy images.
 
 ## Contributing
 
