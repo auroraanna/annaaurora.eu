@@ -1,6 +1,6 @@
 +++
 title = "Linux journey"
-date = 2021-06-24 03:00:40+02:00
+date = 2021-06-24T03:00:40+02:00
 +++
 
 My personal timeline of Linux distributions that I've used.

@@ -1,7 +1,9 @@
 +++
 title = "Accounts"
-date = 2021-08-17 21:30:00+02:00
-updated = 2022-03-19 20:53:24+01:00
+date = 2021-08-17T21:30:00+02:00
+
+[extra]
+updated = 2022-03-19T20:53:24+01:00
 
 [taxonomies]
 tags = ["contact", "GitLab", "GitHub", "Codeberg", "Keyoxide", "Email", "matrix", "Reddit"]
@@ -60,6 +62,8 @@ Sometimes I post memes or screenshots of my Sway configuration on Reddit.
 
 ### matrix
 
+<address>
+
 The best way to contact me is [matrix](https://matrix.org/). Your messages will only be able to be read by me.
 
 <a href="https://matrix.to/#/@papojari:artemislena.eu">
@@ -71,9 +75,11 @@ The best way to contact me is [matrix](https://matrix.org/). Your messages will 
 > If you are new, do not register an account on the matrix.org server, instead, have a look at [this list.](https://github.com/techlore/faq-bot/blob/6c257e35c9033de7222be16528f3ab39a466b56a/faq.json#L10)
 >
 > <https://artemislena.eu/contact.html>
+</address>
 
 ### Email
 
+<address>
 If you really don't want to use [matrix](https://matrix.org/), I can be reached via Email at
 
 <a href="mailto:papojari-git.ovoid@aleeas.com">
@@ -83,3 +89,4 @@ If you really don't want to use [matrix](https://matrix.org/), I can be reached 
 </a>
 
 Our emails will be unencrypted meaning anyone that an email passes will be able to read it. If you want to send an encrypted Email, use my public key from [Keyoxide](https://keyoxide.org/319A982F5F12013B730139FF5D98BEEC20C9695C).
+</address>

@@ -1,6 +1,6 @@
 +++
 title = 'Home Manager, the best solution to your dotfiles'
-date = 2022-01-02 02:13:00
+date = 2022-01-02T02:13:00
 
 [taxonomies]
 tags = ["nix", "home-manager"]
