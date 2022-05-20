@@ -110,6 +110,7 @@ logo_home_link = "/"
 # Menu items to display. You define a url and the name of the menu item.
 # NOTE: `$BASE_URL/` must be included in the url name.
 main_menu = [
+  {url="/", name="🏠 Home"},
   {url="/blog/", name="📜 Blog"},
   {url="/art/", name="🌠 Art portfolio"},
   {url="/find-billy/", name="🤖 Find Billy!"},
