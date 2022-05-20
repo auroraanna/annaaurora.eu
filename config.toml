@@ -113,6 +113,7 @@ main_menu = [
   {url="/blog/", name="📜 Blog"},
   {url="/art/", name="🌠 Art portfolio"},
   {url="/find-billy/", name="🤖 Find Billy!"},
+  {url="/webring/", name="🪐 Webring"},
   {url="/accounts#contact", name="👋 Contact"},
   {url="/license", name="©️ License"},
 ]
