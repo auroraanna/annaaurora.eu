@@ -34,9 +34,29 @@
         {{ page.content | safe }}
     </article>
     <footer>
+        {#
+        For some reason loading the json directly over HTTPS doesn't work.
+        {% set be_crime_do_gay = load_data(url="https://artemislena.eu/services/downloads/beCrimeDoGay.json") %}
+        #}
+        {% set be_crime_do_gay = load_data(path="static/webrings/be_crime_do_gay.json") %}
+        {% set be_crime_do_gay_length = be_crime_do_gay | length %}
+        {% for i in range(end=be_crime_do_gay_length) %}
+            {% if be_crime_do_gay[i] == "https://papojari.codeberg.page/webring/" %}
+                {% set_global own_index = i %}{% break %}
+            {% endif %}
+        {% endfor %}
+        {% set left = own_index - 1 %}
+        {% if left < 0 %}
+            {% set left = be_crime_do_gay_length %}
+            {% set left = left - 1 %}
+        {% endif %}
+        {% set right = own_index + 1 %}
+        {% if right >= be_crime_do_gay_length %}
+            {% set right = 0 %}
+        {% endif %}
         <nav class="menu" style="display: flex; justify-content: space-evenly;">
-            <a href="https://echo--chamber.neocities.org" class="prev-next">← Take a step left</a>
-            <a href="https://artemislena.eu/webring.html" class="prev-next">Take a step right →</a>
+            <a href="{{be_crime_do_gay[left]}}" class="prev-next">← Go left</a>
+            <a href="{{be_crime_do_gay[right]}}" class="prev-next">Go right →</a>
         </nav>
     </footer>
 
