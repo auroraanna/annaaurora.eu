@@ -6,10 +6,9 @@ date = 2020-05-22
 tags = ["city", "low-poly"]
 categories = ["3d-art"]
 
-[extra]
+[extra.imagery]
 software = "Blender"
 render_engine = "Eevee"
-pbr_materials = ""
 +++
 
 This was modelled with inspiration from [Imphenzia](https://www.youtube.com/watch?v=ewKwYsQjBdQ).

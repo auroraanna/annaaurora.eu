@@ -6,8 +6,7 @@ date = 2021-08-29
 tags = ["hexagon", "hexagonal-prism"]
 categories = ["3d-art"]
 
-[extra]
+[extra.imagery]
 software = "Blender"
 render_engine = "Cycles"
-pbr_materials = ""
 +++

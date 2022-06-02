@@ -6,7 +6,7 @@ date = 2021-02-09
 tags = ["Honda", "electric-vehicle", "sports car"]
 categories = ["3d-art"]
 
-[extra]
+[extra.imagery]
 software = "Blender"
 render_engine = "Cycles"
 pbr_materials = "Walls and floor from ambientCG"

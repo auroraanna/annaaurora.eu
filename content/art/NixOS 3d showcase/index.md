@@ -6,10 +6,9 @@ date = 2021-06-05
 tags = ["NixOS", "Nix", "Nixpkgs"]
 categories = ["3d-art"]
 
-[extra]
+[extra.imagery]
 software = "Blender"
 render_engine = "Cycles"
-pbr_materials = ""
 +++
 
 I created this piece as a background for my desktop. It tries to showcase what [NixOS](https://nixos.org) is about.

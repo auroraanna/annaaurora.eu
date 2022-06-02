@@ -6,10 +6,9 @@ date = 2020-05-26
 tags = ["meme", "barack-obama", "obama-prism"]
 categories = ["3d-art"]
 
-[extra]
+[extra.imagery]
 software = "Blender"
 render_engine = "Cycles"
-pbr_materials = ""
 +++
 
 Yes, this is a meme.
