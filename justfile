@@ -1,8 +1,8 @@
 #!/usr/bin/env just --justfile
 NAME:='papojari.codeberg.page'
 BUILD_DIR:='public'
-ALPINE_DEPS:='git just zola imagemagick rsync lmms jack --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/'
-NIXPKGS_DEPS:='git just zola imagemagick rsync lmms'
+ALPINE_DEPS:='git just zola tidyhtml imagemagick rsync lmms jack --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/'
+NIXPKGS_DEPS:='git just zola html-tidy imagemagick rsync lmms'
 
 # By default, recipes are only listed.
 default:
@@ -46,9 +46,13 @@ serve: git-download-submodules
 
 build: git-download-submodules
 	#!/bin/sh
-	set -euxo pipefail
-	# Let Zola compile the website
+	set -uxo pipefail
+	# Let Zola compile the website and format HTML
 	zola build
+	for file in $(find public -name '*.html'); do
+		tidy -m --wrap 0 --indent true --indent-with-tabs false --indent-spaces 4 $file
+		sed -i 's/    /	/g' $file
+	done
 	# Copy license file into top directory
 	cp content/License.md public/LICENSE.md
 	# Art section generate lossy images and generate audio
