@@ -1,5 +1,5 @@
 #!/usr/bin/env just --justfile
-NAME:='papojari.codeberg.page'
+NAME:='annaaurora.eu'
 BUILD_DIR:='public'
 ALPINE_DEPS:='git just zola tidyhtml imagemagick rsync lmms jack --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/'
 NIXPKGS_DEPS:='git just zola html-tidy imagemagick rsync lmms'
@@ -73,12 +73,16 @@ deploy: build
 	git config --global user.email "mail@ci.codeberg.org"
 	git config --global user.name "Codeberg CI"
 	# Clone deploy repository
-	git clone https://"$CODEBERG_ACCESS_TOKEN"@codeberg.org/papojari/pages.git pages
-	# Preserve find-billy folder while copying build to pages
-	cp -r pages/find-billy find-billy-backup
+	git clone https://"$CODEBERG_ACCESS_TOKEN"@codeberg.org/annaaurora/pages.git pages
+	# Preserve find-billy folder and .domains while copying build to pages
+	mkdir backup
+	cp -r pages/find-billy backup/find-billy
+	cp pages/.domains backup/.domains
 	rsync -r --delete --exclude-from=".rsyncignore" public/ pages
 	rm -rf pages/find-billy
-	cp -r find-billy-backup pages/find-billy
+	rm -rf pages/.domains
+	cp -r backup/find-billy pages/find-billy
+	cp -r backup/.domains pages/.domains
 	# Deploy with git
 	cd pages
 	git add -A
