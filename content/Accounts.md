@@ -10,32 +10,40 @@ tags = ["contact", "GitLab", "GitHub", "Codeberg", "Keyoxide", "Email", "matrix"
 +++
 ## Identity verification
 
-<a href="https://keyoxide.org/319A982F5F12013B730139FF5D98BEEC20C9695C">
+<a href="https://keyoxide.org/63DC33A8BC3CCF308F4481BB5EA1FECB67CFA6E1">
 	<p class="badge">
-		<img src="https://keyoxide.org/static/img/logo_circle.png" alt="Keyoxide icon"/>papojari
+		<img src="https://keyoxide.org/static/img/logo_circle.png" alt="Keyoxide icon"/>Anna Aurora (Key of YubiKey 17738056)
 	</p>
 </a>
+
+<a href="https://keyoxide.org/9FA8007517DCA68511DDF62299BFC62AD99A79E9">
+	<p class="badge">
+		<img src="https://keyoxide.org/static/img/logo_circle.png" alt="Keyoxide icon"/>Anna Aurora (Key of YubiKey 17738253)
+	</p>
+</a>
+
+I have 2 YubiKeys as a backup each with their own GPG key.
 
 ## git hosting sites
 
 Most of my repositories are on Codeberg.
 
-<a href="https://codeberg.org/papojari">
+<a href="https://codeberg.org/annaaurora">
 	<p class="badge">
-		<img class="white-when-dark" src="../logos/codeberg.svg" alt="Codeberg icon"/>papojari
+		<img class="white-when-dark" src="../logos/codeberg.svg" alt="Codeberg icon"/>Anna Aurora
 	</p>
 </a>
 
-<a href="https://github.com/papojari">
+<a href="https://github.com/annaaurora">
 	<p class="badge">
-		<img class="white-when-dark" src="../fontawesome/svgs/brands/github.svg" alt="GitHub icon"/>papojari
+		<img class="white-when-dark" src="../fontawesome/svgs/brands/github.svg" alt="GitHub icon"/>Anna Aurora
 	</p>
 </a>
 
-<a href="https://gitlab.com/papojari">
+<a href="https://gitlab.com/annaaurora">
 	<p class="badge">
 		<img style="filter: invert(50%) sepia(100%) saturate(250%) hue-rotate(350deg)
-		brightness(90%) contrast(200%);" src="../fontawesome/svgs/brands/gitlab.svg" alt="GitLab icon"/>papojari
+		brightness(90%) contrast(200%);" src="../fontawesome/svgs/brands/gitlab.svg" alt="GitLab icon"/>Anna Aurora
 	</p>
 </a>
 
@@ -54,9 +62,9 @@ Sometimes I post memes or screenshots of my Sway configuration on Reddit.
 
 ### Report issues with this website
 
-<a href="https://codeberg.org/papojari/papojari.codeberg.page/issues">
+<a href="https://codeberg.org/annaaurora/annaaurora.eu/issues">
 	<p class="badge">
-		<img class="white-when-dark" src="../logos/codeberg.svg" alt="Codeberg icon"/>Codeberg.org/papojari.codeberg.page/issues
+		<img class="white-when-dark" src="../logos/codeberg.svg" alt="Codeberg icon"/>Codeberg.org/annaaurora/annaaurora.eu/issues
 	</p>
 </a>
 
@@ -82,11 +90,11 @@ The best way to contact me is [matrix](https://matrix.org/). Your messages will 
 <address>
 If you really don't want to use [matrix](https://matrix.org/), I can be reached via Email at
 
-<a href="mailto:papojari-git.ovoid@aleeas.com">
+<a href="mailto:anna@annaaurora.eu">
 	<p class="badge">
-		<img class="white-when-dark" src="../fontawesome/svgs/regular/envelope.svg" alt="envelope icon"/>papojari-git.ovoid@aleeas.com
+		<img class="white-when-dark" src="../fontawesome/svgs/regular/envelope.svg" alt="envelope icon"/>anna@annaaurora.eu
 	</p>
 </a>
 
-Our emails will be unencrypted meaning anyone that an email passes will be able to read it. If you want to send an encrypted Email, use my public key from [Keyoxide](https://keyoxide.org/319A982F5F12013B730139FF5D98BEEC20C9695C).
+Our emails will be unencrypted meaning anyone that an email passes will be able to read it. If you want to send an encrypted Email, use [one of my public keys from Keyoxide](#identity-verification).
 </address>

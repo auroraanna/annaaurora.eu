@@ -1,9 +1,9 @@
-# [papojari.codeberg.page](https://papojari.codeberg.page) 🌐️
+# [annaaurora.eu](https://annaaurora.eu) 🌐️
 
-papojari's personal website's <span style="text-decoration: underline;">source code</span>
+Anna Aurora's personal website's <span style="text-decoration: underline;">source code</span>
 
 This repository contains:
-- The source code of the webpages for papojari's
+- The source code of the webpages for Anna Aurora's
 	- Linux journey
 	- recommendations
 	- blog
@@ -11,7 +11,7 @@ This repository contains:
 	- online accounts
 	- games
 
-The [Zola static website generator](https://www.getzola.org/) compiles the Markdown, [Tera](https://tera.netlify.app/) templates and Sass to HTML and CSS. The compiled site can be found at <https://codeberg.org/papojari/pages>.
+The [Zola static website generator](https://www.getzola.org/) compiles the Markdown, [Tera](https://tera.netlify.app/) templates and Sass to HTML and CSS. The compiled site can be found at <https://codeberg.org/annaaurora/pages>.
 
 ## Usage
 
@@ -44,11 +44,11 @@ This lets Zola compile the website and then regenerates the lossy images.
 
 ## Contributing
 
-If you have something that you think should be on this website please open an issue at <https://codeberg.org/papojari/papojari.codeberg.page/issues> so we can discuss it further.
+If you have something that you think should be on this website please open an issue at <https://codeberg.org/annaaurora/annaaurora.eu/issues> so we can discuss it further.
 
 ## License
 
-©️ 2022 papojari
+©️ 2022 Anna Aurora Neugebauer
 
 By default everything in this repository is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode). [Here](https://creativecommons.org/licenses/by-sa/4.0/) is human-readable summary of the license.
 
