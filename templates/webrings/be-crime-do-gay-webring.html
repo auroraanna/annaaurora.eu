@@ -41,7 +41,7 @@
         {% set be_crime_do_gay = load_data(path="static/webrings/be-crime-do-gay-webring.json") %}
         {% set be_crime_do_gay_length = be_crime_do_gay | length %}
         {% for i in range(end=be_crime_do_gay_length) %}
-            {% if be_crime_do_gay[i] == "https://annaaurora.eu/webrings/be-crime-do-gay-webring/" %}
+            {% if be_crime_do_gay[i] == "https://annaaurora.eu/webrings/be-crime-do-gay-webring" %}
                 {% set_global own_index = i %}{% break %}
             {% endif %}
         {% endfor %}
