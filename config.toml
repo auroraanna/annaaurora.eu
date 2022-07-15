@@ -85,11 +85,11 @@ full_width = false
 center = true
 
 # set a custom favicon. Must be placed in root of static/ directory...
-favicon = "logos/icon.svg"
+favicon = "icon.svg"
 
 # Set a custom preview image for your website when posted as a link.
 # Must be placed in root of static/ directory...
-# og_preview_img = ""
+og_preview_img = "icon.svg"
 
 # Copyright notice if desired. Defaults to
 copyright = " "
