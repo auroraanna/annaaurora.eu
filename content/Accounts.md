@@ -20,15 +20,23 @@ I cryptographically verified that I own all the accounts listed on this page. Ke
 
 ## PGP keys
 
+### Current
+
 <a href="/.well-known/openpgpkey/hu/fxy63pyohfbm34b533z1nk4bhfhbkpsh">
 	<p class="badge">
 		Download my public PGP key
 	</p>
 </a>
 
-It it also available via
+It is available via
 - WKD from [annaaurora.eu](https://annaaurora.eu)
 - [key.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/E71487CE9FA30D35ED9668A6B1BDDD56BCE7CD72)
+
+### Superseded
+
+- 9FA8007517DCA68511DDF62299BFC62AD99A79E9
+- 63DC33A8BC3CCF308F4481BB5EA1FECB67CFA6E1
+- [319A982F5F12013B730139FF5D98BEEC20C9695C](https://keys.openpgp.org/vks/v1/by-fingerprint/319A982F5F12013B730139FF5D98BEEC20C9695C)
 
 ## git hosting sites
 
