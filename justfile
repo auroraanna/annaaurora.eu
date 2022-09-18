@@ -75,11 +75,30 @@ build: git-download-submodules
 	# Let Zola compile the website
 	zola build
 	# Copy license file into top directory
-	cp content/License.md public/LICENSE.md
+	cp content/License.md /pages/LICENSE.md
 	# Art section generate lossy images if the lossless images changed
 	if [[ $(echo $(ls -1 $PWD/content/art/*/* | awk '/lossless.webp/' | sed 's/ /" "/g' | sed 's/(/"("/g' | sed 's/)/")"/g' | sed 's/:/":"/g'| xargs sha256sum | cut -c 1-64)) != $(echo $BUILD_LOSSLESS_IMAGE_SHA256S) ]]; then
 		for art_name in $(ls -1 public/art | awk '! /.html/'); do
 			convert {{BUILD_DIR}}/art/$art_name/lossless.webp -quality 90% 	{{BUILD_DIR}}/art/$art_name/lossy.webp
 		done
 	fi
+
+deploy: build
+	#!/bin/sh
+	set -euxo pipefail
+	# Configure git identity
+	git config --global user.email "mail@ci.codeberg.org"
+	git config --global user.name "Codeberg CI"
+	# Clone deploy repository
+	git clone https://"$CODEBERG_ACCESS_TOKEN"@codeberg.org/papojari/pages.git pages
+	# Preserve find-billy folder while copying build to pages
+	cp -r pages/find-billy find-billy-backup
+	rsync -r --delete --exclude-from=".rsyncignore" public/ pages
+	rm -rf pages/find-billy
+	cp -r find-billy-backup pages/find-billy
+	# Deploy with git
+	cd pages
+	git add -A
+	git commit -m "Generate website - based on commit ${CI_COMMIT_SHA}"
+	git push origin main
 
