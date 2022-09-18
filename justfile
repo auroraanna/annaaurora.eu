@@ -65,6 +65,8 @@ build: git-download-submodules
 			lmms render {{BUILD_DIR}}/art/$art_name/source.mmpz --allowroot --format ogg --loop --output {{BUILD_DIR}}/art/$art_name/lossy.ogg
 		fi
 	done
+	# Delete error 404 page because the Caddy web server delivers the error 404 page from somewhere else.
+	rm {{BUILD_DIR}}/404.html
 
 deploy: build
 	#!/bin/sh
