@@ -68,7 +68,7 @@ include_content = true
 
 # Theme color. You can have any color you want, so long as it's...
 # ["red", "yellow", "green", "blue", "purple"]
-theme_color = "yellow"
+theme_color = "cyan"
 
 # How many menu items to show on desktop. if you set this to 0, only submenu
 # button will be visible.
@@ -86,7 +86,7 @@ center = true
 
 # Set a custom preview image for your website when posted as a link.
 # Must be placed in root of static/ directory...
-og_preview_img = "icon.svg"
+og_preview_img = "icon.jpeg"
 
 # Copyright notice if desired. Defaults to
 copyright = " "
@@ -137,15 +137,19 @@ date_format = "%Y-%m-%d %H:%M:%S%z"
 [extra.author]
 # Show author's name in blog post meta data.
 show = true
-# # First, last name, username and gender for [The Open Graph protocol](https://ogp.me/)
+# First, last name, username and gender for [The Open Graph protocol](https://ogp.me/)
 first_name = "Anna"
 last_name = "Neugebauer"
-## The username is also shown as the section and post author
+# The username is also shown as the section and post author
 username = "Anna Aurora"
 gender = "female"
 
 # Set a custom favicon. `path` starts in the `static` directory.
 [extra.favicon]
-type = "image/svg+xml"
-path = "icon.svg"
+type = "image/jpeg"
+path = "icon.jpeg"
+alt = "Blue-haired anime furry with choker and pullover on a blue background"
 
+# Gives the favicon in the top left of the website a margin.
+[extra.logo]
+margin = false
