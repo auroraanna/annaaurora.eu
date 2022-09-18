@@ -46,7 +46,7 @@ serve: git-download-submodules
 
 build: git-download-submodules
 	#!/bin/sh
-	set -uxo pipefail
+	set -euxo pipefail
 	# Let Zola compile the website
 	zola build
 	# Copy license file into top directory
