@@ -1,8 +1,8 @@
 #!/usr/bin/env just --justfile
 NAME:='papojari.codeberg.page'
 BUILD_DIR:='public'
-ALPINE_DEPS:='git just zola imagemagick rsync'
-NIXPKGS_DEPS:='git just zola imagemagick rsync'
+ALPINE_DEPS:='git just zola imagemagick rsync lmms jack --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/'
+NIXPKGS_DEPS:='git just zola imagemagick rsync lmms'
 
 # By default, recipes are only listed.
 default:
@@ -51,9 +51,15 @@ build: git-download-submodules
 	zola build
 	# Copy license file into top directory
 	cp content/License.md public/LICENSE.md
-	# Art section generate lossy images
+	# Art section generate lossy images and generate audio
 	for art_name in $(ls -1 public/art | awk '! /.html/'); do
-		convert {{BUILD_DIR}}/art/$art_name/lossless.webp -quality 90% {{BUILD_DIR}}/art/$art_name/lossy.webp
+		if [ -f "{{BUILD_DIR}}/art/$art_name/lossless.webp" ]; then
+			convert {{BUILD_DIR}}/art/$art_name/lossless.webp -quality 90% {{BUILD_DIR}}/art/$art_name/lossy.webp
+		fi
+		if [ -f "{{BUILD_DIR}}/art/$art_name/source.mmpz" ]; then
+			lmms render {{BUILD_DIR}}/art/$art_name/source.mmpz --allowroot --format wav --loop --output {{BUILD_DIR}}/art/$art_name/lossless.wav
+			lmms render {{BUILD_DIR}}/art/$art_name/source.mmpz --allowroot --format ogg --loop --output {{BUILD_DIR}}/art/$art_name/lossy.ogg
+		fi
 	done
 
 deploy: build
