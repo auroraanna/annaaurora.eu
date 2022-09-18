@@ -6,7 +6,7 @@ date = 2021-08-08
 tags = ["bedroom", "rgb-lights", "bokeh", "tower-pc", "curved-monitor", "gaming"]
 categories = ["3d-art"]
 
-[extra]
+[extra.imagery]
 software = "Blender"
 render_engine = "Cycles"
 pbr_materials = "ambientCG"

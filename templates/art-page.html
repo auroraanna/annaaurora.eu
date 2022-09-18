@@ -31,25 +31,66 @@
             {%- endblock toc -%}
         </header>
 
-        <p class="images">
-            <a href="lossless.webp">
-              <img src="lossy.webp">
-              lossless image
-            </a>
-        </p>
+        {% if page.extra.imagery %}
+            <p class="imagery">
+                <a href="lossless.webp">
+                    <img src="lossy.webp">
+                    Lossless image
+                </a>
+            </p>
 
-        <table class="technical-info">
-            <tr>
-                <th>Software</th>
-                <th>Render engine</th>
-                <th>PBR materials</th>
-            </tr>
-            <tr>
-                <td>{{ page.extra.software }}</td>
-                <td>{{ page.extra.render_engine }}</td>
-                <td>{{ page.extra.pbr_materials }}</td>
-            </tr>
-        </table>
+            <table class="technical-info">
+                <tr>
+                    {% if page.extra.imagery.software %}
+                        <th>Software</th>
+                    {% endif %}
+                    {% if page.extra.imagery.render_engine %}
+                        <th>Render engine</th>
+                    {% endif %}
+                    {% if page.extra.imagery.pbr_materials %}
+                        <th>PBR materials</th>
+                    {% endif %}
+                </tr>
+                <tr>
+                    {% if page.extra.imagery.software %}
+                        <td>{{ page.extra.imagery.software }}</td>
+                    {% endif %}
+                    {% if page.extra.imagery.render_engine %}
+                        <td>{{ page.extra.imagery.render_engine }}</td>
+                    {% endif %}
+                    {% if page.extra.imagery.pbr_materials %}
+                        <td>{{ page.extra.imagery.pbr_materials }}</td>
+                    {% endif %}
+                </tr>
+            </table>
+        {% endif %}
+
+        {% if page.extra.audio %}
+            <p class="audio">
+                <a href="lossless.wav">
+                    <audio controls src="lossy.ogg">
+                    Lossless audio
+                </a>
+                {% if page.extra.audio.software == "LMMS" %}
+                    <a href="source.mmpz">LMMS project file</a>
+                {% else %}
+                    <a href="source.{{ page.extra.source_file_ending }}">Source file</a>
+                {% endif %}
+            </p>
+
+            <table class="technical-info">
+                <tr>
+                    {% if page.extra.audio.software %}
+                        <th>Software</th>
+                    {% endif %}
+                </tr>
+                <tr>
+                    {% if page.extra.audio.software %}
+                        <td>{{ page.extra.audio.software }}</td>
+                    {% endif %}
+                </tr>
+            </table>
+        {% endif %}
 
         {{ page.content | safe }}
 
