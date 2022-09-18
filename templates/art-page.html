@@ -9,7 +9,7 @@
 {%- endblock math -%}
 
 {%- block title %}
-    <title>{{ page.title }} - {{  config.extra.author }}</title>
+    <title>{{ page.title }}</title>
     {# TODO: make some kind of social media linking, i guess? #}
     {#%- include "snippets/social.html" %#}
 {%- endblock title -%}
@@ -20,16 +20,14 @@
             <h1 class="post-title">
                 <a href="{{ page.permalink  }}">{{ page.title }}</a>
             </h1>
-            {{ posts::meta(page=page, author=config.extra.show_author) }}
+            {{ posts::meta(page=page) }}
 
-            {%- block ToC -%}
-                {%- if page.extra.ToC or config.extra.ToC -%}
+            {%- block toc -%}
+                {%- if page.extra.toc or config.extra.toc -%}
                     {{ toc::toc(t=page.toc) }}
                 {%- endif -%}
-            {%- endblock ToC -%}
+            {%- endblock toc -%}
         </header>
-
-        {#- Skipping logic for cover as was in original Terminal theme -#}
 
         {{ page.content | safe }}
 
