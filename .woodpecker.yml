@@ -1,0 +1,23 @@
+pipeline:
+  build:
+    image: alpine
+    commands:
+      - apk add zola git
+      - git submodule update --init --recursive
+      - zola build
+  deploy:
+    image: alpine
+    secrets: [ ACCESS_TOKEN ]
+    commands:
+      - apk add git rsync
+      # configure git
+      - git config --global user.email "mail@ci.codeberg.org"
+      - git config --global user.name "Codeberg CI"
+      # deploy changes
+      - git clone https://"$${ACCESS_TOKEN}"@codeberg.org/papojari/pages.git /pages
+      - rsync -r --delete --exclude-from=".rsyncignore" public/ /pages
+      - cp content/License.md /pages/LICENSE.md
+      - cd /pages
+      - git add -A
+      - git commit -m "Generate website - based on commit ${CI_COMMIT_SHA}"
+      - git push origin main
