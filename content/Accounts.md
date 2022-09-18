@@ -10,19 +10,25 @@ tags = ["contact", "GitLab", "GitHub", "Codeberg", "Keyoxide", "Email", "matrix"
 +++
 ## Identity verification
 
-<a href="https://keyoxide.org/63DC33A8BC3CCF308F4481BB5EA1FECB67CFA6E1">
+<a href="https://keyoxide.org/E71487CE9FA30D35ED9668A6B1BDDD56BCE7CD72">
 	<p class="badge">
-		<img src="https://keyoxide.org/static/img/logo_circle.png" alt="Keyoxide icon"/>Anna Aurora (Key of YubiKey 17738056)
+		<img src="https://keyoxide.org/static/img/logo_circle.png" alt="Keyoxide icon"/>Anna Aurora
 	</p>
 </a>
 
-<a href="https://keyoxide.org/9FA8007517DCA68511DDF62299BFC62AD99A79E9">
+I cryptographically verified that I own all the accounts listed on this page. Keyoxide displays that I did that.
+
+## PGP keys
+
+<a href="/.well-known/openpgpkey/hu/fxy63pyohfbm34b533z1nk4bhfhbkpsh">
 	<p class="badge">
-		<img src="https://keyoxide.org/static/img/logo_circle.png" alt="Keyoxide icon"/>Anna Aurora (Key of YubiKey 17738253)
+		Download my public PGP key
 	</p>
 </a>
 
-I have 2 YubiKeys as a backup each with their own GPG key.
+It it also available via
+- WKD from [annaaurora.eu](https://annaaurora.eu)
+- [key.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/E71487CE9FA30D35ED9668A6B1BDDD56BCE7CD72)
 
 ## git hosting sites
 
