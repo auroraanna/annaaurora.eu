@@ -1,6 +1,6 @@
 +++
 title = "🏦 Finance is weird"
-date = 2021-06-24 00:08:25
+date = 2021-06-24T00:08:25
 
 [taxonomies]
 tags = ["bank", "cryptocurrency", "credit-card", "visa", "mastercard"]

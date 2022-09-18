@@ -1,6 +1,6 @@
 +++
 title = '☢️ "Nuclear power? No thanks!" - Completely irrational'
-date = 2021-12-17 17:57:13
+date = 2021-12-17T17:57:13
 
 [taxonomies]
 tags = ["nuclear-power", "energy", "power", "renewables"]
