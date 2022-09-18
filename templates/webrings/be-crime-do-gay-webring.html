@@ -38,7 +38,7 @@
         For some reason loading the json directly over HTTPS doesn't work.
         {% set be_crime_do_gay = load_data(url="https://artemislena.eu/services/downloads/beCrimeDoGay.json") %}
         #}
-        {% set be_crime_do_gay = load_data(path="static/webrings/be_crime_do_gay.json") %}
+        {% set be_crime_do_gay = load_data(path="static/webrings/be-crime-do-gay-webring.json") %}
         {% set be_crime_do_gay_length = be_crime_do_gay | length %}
         {% for i in range(end=be_crime_do_gay_length) %}
             {% if be_crime_do_gay[i] == "https://papojari.codeberg.page/webring/" %}

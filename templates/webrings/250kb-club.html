@@ -1,0 +1,47 @@
+{% import "macros/head.html" as head -%}
+{% import "macros/toc.html" as toc -%}
+{% extends "base.html" -%}
+
+{%- block math -%}
+  {% if page.extra.math %}
+  {{ head::katex() }}
+  {% endif %}
+{%- endblock math -%}
+
+{%- block title %}
+    <title>{{ page.title }}</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
+
+{%- block main -%}
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="{{ page.permalink  }}">{{ page.title }}</a>
+            </h1>
+
+            {{ posts::meta(page=page) }}
+            {{ posts::langs(page=page) }}
+
+            {%- block toc -%}
+                {%- if page.extra.toc or config.extra.toc -%}
+                    {{ toc::toc(t=page.toc) }}
+                {%- endif -%}
+            {%- endblock toc -%}
+        </header>
+
+        {{ page.content | safe }}
+    </article>
+    <footer>
+        <a href="https://250kb.club/papojari-codeberg-page">
+            250kb.club
+            <img
+              alt="badge: proud member of the 250kb club"
+              src="{{ page.permalink }}/color_badge_dark.png"
+            />
+        </a>
+    </footer>
+
+
+{%- endblock main -%}
