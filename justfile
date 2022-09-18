@@ -67,8 +67,8 @@ git-download-submodules:
 serve: git-download-submodules
 	@zola serve
 
-build:
-	#!/usr/bin/env bash
+build: git-download-submodules
+	#!/bin/sh
 	set -uxo pipefail
 	# `lossless.webp`s sha256s
 	BUILD_LOSSLESS_IMAGE_SHA256S=$(ls -1 $PWD/public/art/*/* | awk '/lossless.webp/' | sed 's/ /" "/g' | sed 's/(/"("/g' | sed 's/)/")"/g' | sed 's/:/":"/g'| xargs sha256sum | cut -c 1-64)
