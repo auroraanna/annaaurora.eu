@@ -1,8 +1,8 @@
 # The URL the site will be built for
-base_url = "https://papojari.codeberg.page"
+base_url = "https://annaaurora.eu"
 
 # The site title and description; used in feeds by default.
-title = "papojari"
+title = "Anna Aurora"
 description = "placeholder description text for your blog!"
 
 # The default language; used in feeds.
@@ -102,7 +102,7 @@ favicon = "logos/icon.svg"
 copyright = " "
 
 # What is displayed in the top left corner of the website. Default is zerm.
-logo_text = "papojari"
+logo_text = "Anna Aurora"
 
 # Link in logo. Default returns you to $BASE_URL.
 logo_home_link = "/"
@@ -151,6 +151,6 @@ show = true
 first_name = "Anna"
 last_name = "Neugebauer"
 ## The username is also shown as the section and post author
-username = "papojari"
+username = "Anna Aurora"
 gender = "female"
- 
+

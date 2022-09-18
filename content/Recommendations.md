@@ -11,7 +11,7 @@ updated = 2022-03-19T18:22:24+01:00
 
 ## Operating systems
 
-- [NixOS](https://nixos.org/) with [my NixOS configuration](https://codeberg.org/papojari/nixos-config) and [my Home Manager configuration](https://codeberg.org/papojari/home-manager-config)
+- [NixOS](https://nixos.org/) with [my NixOS configuration](https://codeberg.org/annaaurora/nixos-config) and [my Home Manager configuration](https://codeberg.org/annaaurora/home-manager-config)
 - [Arch Linux](https://archlinux.org/)
 
 ## Terminal emulators

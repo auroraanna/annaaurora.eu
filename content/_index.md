@@ -1,5 +1,5 @@
 +++
-title = "papojari"
+title = "Anna Aurora"
 date = 2022-03-06T21:17:05+01:00
 paginate_by = 20
 insert_anchor_links = "right"
@@ -9,7 +9,7 @@ date = 2022-03-06T21:17:05+01:00
 updated = 2022-03-19T18:54:37+01:00
 +++
 Hello,  
-I am papojari.
+I am Anna Aurora.
 
 Programming is my hobby: I design websites, develop games and write packages and my system configuration in Nix. I also do some code review of new or updated packages over at the [Nixpkgs](https://github.com/NixOS/nixpkgs/pulls) repository.
 
