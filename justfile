@@ -67,6 +67,11 @@ build: git-download-submodules
 	done
 	# Delete error 404 page because the Caddy web server delivers the error 404 page from somewhere else.
 	rm {{BUILD_DIR}}/404.html
+	# Update Find Billy!
+	wget --output-document find-billy.zip https://codeberg.org/attachments/5f0815d4-2ff6-4795-bd8c-2e3534e10c4c
+	unzip find-billy.zip
+	mv godot-build/'Find Billy for Web v0.37.2' {{BUILD_DIR}}/find-billy
+	rm -rf find-billy.zip godot-build
 
 deploy: build
 	#!/bin/sh
@@ -76,15 +81,8 @@ deploy: build
 	git config --global user.name "Codeberg CI"
 	# Clone deploy repository
 	git clone https://"$CODEBERG_ACCESS_TOKEN"@codeberg.org/annaaurora/pages.git pages
-	# Preserve find-billy folder and .domains while copying build to pages
-	mkdir backup
-	cp -r pages/find-billy backup/find-billy
-	cp pages/.domains backup/.domains
+	# Copy build
 	rsync -r --delete --exclude-from=".rsyncignore" public/ pages
-	rm -rf pages/find-billy
-	rm -rf pages/.domains
-	cp -r backup/find-billy pages/find-billy
-	cp -r backup/.domains pages/.domains
 	# Deploy with git
 	cd pages
 	git add -A
