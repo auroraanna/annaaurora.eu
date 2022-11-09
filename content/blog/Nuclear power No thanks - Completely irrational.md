@@ -6,6 +6,10 @@ date = 2021-12-17T17:57:13
 tags = ["nuclear-power", "energy", "power", "renewables"]
 categories = ["politics"]
 +++
+{% update(date="2022-11-09T20:16:08+01:00") %}
+I wrote this for a school assignment in english class. We were supposed to argue for something and destroy all arguments against it so this post has a pretty strong opinion. I've changed my mind a bit since then. I still think that nuclear fission power is pretty cool and safe but it just takes really long to build nuclear reactors, the price for it's electricity is higher than renewables and some countries would entirely depend on other countries for the fuel, which is something you don't want. Germany shutting down nuclear reactors for coal plants is stupid though. We should focus on renewables and all kinds of electricity storage for the power transition away from fossil fuels.
+{% end %}
+
 2011 in Fukushima, Japan: The nuclear reactor explodes. Short after
 Germany decides to phase out nuclear reactors in their territory over
 the next years because of growing safety concerns from the general
@@ -16,7 +20,7 @@ The decision was definitely driven by panic since it was made right
 after the nuclear accident. Our use of fossil fuels heats up earth. To
 stop and reverse this we need to electrify machines that currently need
 fossil fuels to run because electricity can be generated in a way that
-doesn\'t heat up earth. Therefore we require more electricity additionally
+doesn't heat up earth. Therefore we require more electricity additionally
 to the ever growing need for electricity by a growing population and
 people using more technology. You can use fossil fuels to generate
 electricity but we would be stuck at the same problem again. So we need
