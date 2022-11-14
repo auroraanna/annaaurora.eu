@@ -30,7 +30,7 @@ I cryptographically verified that I own all the accounts listed on this page. Ke
 
 It is available via
 - WKD from [annaaurora.eu](https://annaaurora.eu)
-- [key.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/E71487CE9FA30D35ED9668A6B1BDDD56BCE7CD72)
+- [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/E71487CE9FA30D35ED9668A6B1BDDD56BCE7CD72)
 
 ### Superseded
 
