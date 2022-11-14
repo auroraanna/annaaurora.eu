@@ -61,7 +61,14 @@ Most of my repositories are on Codeberg.
 	</p>
 </a>
 
-## Social media
+## Social media accounts
+
+<a rel="me" href="https://uwu.social/@annaaurora">
+	<p class="badge">
+		<img style="filter: invert(50%) sepia(150%) saturate(250%) hue-rotate(180deg)
+		brightness(90%) contrast(300%);" src="../fontawesome/svgs/brands/mastodon.svg" alt="Mastodon icon"/>Anna Aurora
+	</p>
+</a>
 
 Sometimes I post memes or screenshots of my Sway configuration on Reddit.
 
