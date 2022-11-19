@@ -53,6 +53,8 @@ build: git-download-submodules
 		tidy -m --wrap 0 --indent true --indent-with-tabs false --indent-spaces 4 $file
 		sed -i 's/    /	/g' $file
 	done
+	# Fix `robots.txt`
+	sed -i 's/Sitemap: \//Sitemap: https:\/\/{{NAME}}\//g' {{BUILD_DIR}}/robots.txt
 	# Copy license file into top directory
 	cp content/License.md public/LICENSE.md
 	# Art section generate lossy images and generate audio
