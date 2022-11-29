@@ -63,7 +63,7 @@ Most of my repositories are on Codeberg.
 
 ## Social media accounts
 
-<a rel="me" href="https://uwu.social/@annaaurora">
+<a rel="me" href="https://pony.social/@annaaurora">
 	<p class="badge">
 		<img style="filter: invert(50%) sepia(150%) saturate(250%) hue-rotate(180deg)
 		brightness(90%) contrast(300%);" src="../fontawesome/svgs/brands/mastodon.svg" alt="Mastodon icon"/>Anna Aurora
