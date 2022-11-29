@@ -53,6 +53,8 @@ build: git-download-submodules
 		tidy -m --wrap 0 --indent true --indent-with-tabs false --indent-spaces 4 $file
 		sed -i 's/    /	/g' $file
 	done
+	# Fix `atom.xml`
+	sed -i 's/href="\//href="https:\/\/annaaurora.eu\//g' {{BUILD_DIR}}/atom.xml
 	# Fix `robots.txt`
 	sed -i 's/Sitemap: \//Sitemap: https:\/\/{{NAME}}\//g' {{BUILD_DIR}}/robots.txt
 	# Copy license file into top directory
