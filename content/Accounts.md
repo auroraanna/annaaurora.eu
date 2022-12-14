@@ -61,6 +61,15 @@ Most of my repositories are on Codeberg.
 	</p>
 </a>
 
+## Music
+
+<a href="https://annaaurora.bandcamp.com">
+	<p class="badge">
+		<img style="filter: invert(50%) sepia(150%) saturate(250%) hue-rotate(140deg)
+		brightness(80%) contrast(300%);" src="../fontawesome/svgs/brands/bandcamp.svg" alt="Bandcamp icon"/>Anna Aurora
+	</p>
+</a>
+
 ## Social media accounts
 
 <a rel="me" href="https://pony.social/@annaaurora">
