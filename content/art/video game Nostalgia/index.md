@@ -16,4 +16,4 @@ This is my first attempt at creating music in LMMS. Before, I used Bosca Ceoil b
 > 
 > pretty okay I'd say
 >
-> -- [mazerfaker](@jau2o-dk45a3:artemislena.eu)
+> -- [mazerfaker](https://matrix.to/#/@jau2o-dk45a3:artemislena.eu)

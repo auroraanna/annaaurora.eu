@@ -67,10 +67,22 @@
 
         {% if page.extra.audio %}
             <p class="audio">
-                <a href="lossless.wav">
-                    <audio controls src="lossy.ogg">
-                    Lossless audio
-                </a>
+                <figure>
+                    <figcaption>Listen the lossy audio (Opus) of {{ page.title }}:</figcaption>
+                    <audio controls src="lossy.opus">
+                        <a href="lossy.opus">
+                            Download audio
+                        </a>
+                    </audio>
+                </figure>
+                <figure>
+                    <figcaption>Listen the lossless audio (FLAC) of {{ page.title }}:</figcaption>
+                    <audio controls src="lossless.flac">
+                        <a href="lossless.flac">
+                            Download audio
+                        </a>
+                    </audio>
+                </figure>
                 {% if page.extra.audio.software == "LMMS" %}
                     <a href="source.mmpz">LMMS project file</a>
                 {% else %}
