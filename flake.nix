@@ -87,5 +87,11 @@
         };
 
         packages.default = self.packages.${system}.${packageName};
+
+        devShells.${packageName} = pkgs.mkShell {
+          nativeBuildInputs = self.packages.${system}.${packageName}.nativeBuildInputs;
+        };
+
+        devShells.default = self.devShells.${system}.${packageName};
       });
 }
