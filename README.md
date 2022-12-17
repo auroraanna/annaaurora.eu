@@ -1,50 +1,41 @@
 # [annaaurora.eu](https://annaaurora.eu) 🌐️
 
-Anna Aurora's personal website's <span style="text-decoration: underline;">source code</span>
+## What is this?
 
-This repository contains:
-- The source code of the webpages for Anna Aurora's
-	- Linux journey
-	- recommendations
-	- blog
-	- artwork
-	- online accounts
-	- games
+Anna Aurora's personal website's <span style="text-decoration: underline;">source code</span>.
 
-The [Zola static website generator](https://www.getzola.org/) compiles the Markdown, [Tera](https://tera.netlify.app/) templates and Sass to HTML and CSS. The compiled site can be found at <https://codeberg.org/annaaurora/pages>.
+Anna Aurora's website contains her the her [Linux journey](https://annaaurora.eu/linux-journey), her [software recommendations](https://annaaurora.eu/recommendations), her [blog](https://annaaurora.eu/blog), her [artwork](https://annaaurora.eu/art), [links to her online accounts which includes ways to contact her](https://annaaurora.eu/accounts) and [one of her games](https://annaaurora.eu/find-billy).
 
-## Usage
+The compiled site can be found at <https://annaaurora.eu> of course or by [compiling it yourself](#compiling).
 
-### Dependencies
+## Development
 
-These are the dependencies for the following usage sections:
-- [just](https://github.com/casey/just)
-- [Zola](https://www.getzola.org)
-- Awk
-- sed
-- [imagemagick](https://imagemagick.org/index.php)
-- [rsync](https://rsync.samba.org)
+The compilation tools are defined by the `nativeBuildInputs` on line 27 of `flake.nix`.
 
-If you use Nixpkgs or Alpine Linux: Awk and sed are included preinstalled so you don't have to install them separately.
-
-### Starting a webserver with the compiled site
-
+To start a shell with all the compilation tools do
+```bash
+nix develop
 ```
-just serve
+and after that do
+```bash
+zola serve
 ```
-Note that the lossy artwork images are missing when serving because I thought it be hurtful to the disk to generate the lossy images into the source folders every time you want to serve. It also keeps the folders clean of files that shouldn't be in the source code because they can be generated.
+to start a development webserver of the website. Note that all the stuff the the compilation does like the lossy artwork images and music is missing on the website served by Zola. To have all the stuff and the compilation tools follow [Compiling](#compiling) and then run the command again.
+
+You could also do other stuff with the compilation tools I guess like testing out which audio format takes up the least space for my songs with FFmpeg.
 
 ### Compiling
 
 ```bash
-just build
+nix build --verbose ".?submodules=1"
 ```
+In short, the above command runs all the shell commands in the `buildPhase` on line 35 of `flake.nix` with the compilation tools installed and the `inputs` on line 4 of `flake.nix`  downloaded. The compiled website is then in `result`.
 
-This lets Zola compile the website and then regenerates the lossy images.
+In short, the [Zola static website generator](https://www.getzola.org/) compiles the Markdown, [Tera](https://tera.netlify.app/) templates and Sass to HTML and CSS. Then some images and audio is generated and the site is polished.
 
 ## Contributing
 
-If you have something that you think should be on this website please open an issue at <https://codeberg.org/annaaurora/annaaurora.eu/issues> so we can discuss it further.
+If you have something that you think should be on this website, found any security issues or whatever else please [open an issue](https://codeberg.org/annaaurora/annaaurora.eu/issues), [contact me](https://annaaurora.eu/accounts#contact) or [open a Pull Request](https://codeberg.org/annaaurora/annaaurora.eu/pulls).
 
 ## License
 
