@@ -10,4 +10,4 @@ Take a stroll through this wonderful site or visit the other members' websites.
 
 ## History
 
-For a bit of history to the slogan *Be crime do gay* visit <https://ourbackpockets.com/blogs/main/be-gay-do-crimes>.
+[A bit of history to the slogan *Be crime do gay*](https://ourbackpockets.com/blogs/main/be-gay-do-crimes).
