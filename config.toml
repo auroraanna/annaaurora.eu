@@ -67,8 +67,8 @@ include_content = true
 # Put all your custom variables here
 
 # Theme color. You can have any color you want, so long as it's...
-# ["red", "yellow", "green", "blue", "purple"]
-theme_color = "cyan"
+# ["red", "yellow", "green", "cyan", "blue", "purple", "halloween"]
+theme_color = "halloween"
 
 # How many menu items to show on desktop. if you set this to 0, only submenu
 # button will be visible.
@@ -88,8 +88,7 @@ center = true
 # Must be placed in root of static/ directory...
 og_preview_img = "icon.jpeg"
 
-# Copyright notice if desired. Defaults to
-copyright = " "
+credit = 'Serving <code>$annaaurora.eu_out</code>, built from <a href="https://codeberg.org/annaaurora/annaaurora.eu/src/branch/main/flake.nix"><code>flake.nix</code></a>'
 
 # What is displayed in the top left corner of the website. Default is zerm.
 logo_text = "Anna Aurora"

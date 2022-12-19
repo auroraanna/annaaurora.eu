@@ -41,7 +41,7 @@
 
         <script src="/webrings/be-crime-do-gay-webring/nav.js"></script>
     </head>
-    <body>
+    <body class="gay">
         {#
         "container full" when width == True, regardless of center
         "container center" when only center == True
@@ -85,28 +85,22 @@
                     <noscript>
                         <p class="important">Navigation of the <i>Be crime do gay</i> webring <strong>requires</strong> JavaScript. Please <strong>enable JavaScript</strong> to navigate the webring.</p>
                     </noscript>
-                    <nav class="menu" style="display: flex; justify-content: space-evenly;">
+                    <nav style="display: flex; justify-content: space-evenly;">
                         <a id="webring_prev" href={prev_site}>← Go left</a>
                         <a id="webring_next" href={next_site}> Go right →</a>
                     </nav>
                 </footer>
             {%- endblock main -%}
-
-            {#-
-            I keep pagination out of list, unlike Terminal, because I don't
-            like how the pagination buttons move with the width of the content
-            div.
-            -#}
-
-            {%- block pagination -%}
-                {{ pagination::paginate() }}
-            {%- endblock pagination -%}
         </main>
         {%- block footer -%}
-            <footer>
+            <footer class="{{ container }}">
                 {%- block copyright -%}
                     {{ footer::copyright() }}
                 {%- endblock copyright -%}
+
+                {%- block credit -%}
+                    {{ footer::credit() }}
+                {%- endblock credit -%}
             </footer>
         {%- endblock footer -%}
     </body>
