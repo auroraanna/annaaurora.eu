@@ -1,0 +1,101 @@
+{
+  "nodes": {
+    "Find-Billy": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-NSmdbUOHylLTlmGI5P3jUBp/SQsWzpg+YoSPMzTFUiU=",
+        "type": "tarball",
+        "url": "https://codeberg.org/attachments/5f0815d4-2ff6-4795-bd8c-2e3534e10c4c"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://codeberg.org/attachments/5f0815d4-2ff6-4795-bd8c-2e3534e10c4c"
+      }
+    },
+    "Lyrically-Vantage": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "narHash": "sha256-fZlb8/0xM5ZcdxhOrL8um4vb2VUjMCNAf8ic9gl2YN4=",
+        "type": "tarball",
+        "url": "https://codeberg.org/annaaurora/Lyrically-Vantage/archive/main.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://codeberg.org/annaaurora/Lyrically-Vantage/archive/main.tar.gz"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1670597555,
+        "narHash": "sha256-/k939P2S2246G6K5fyvC0U2IWvULhb4ZJg9K7ZxsX+k=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2dea0f4c2d6e4603f54b2c56c22367e77869490c",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1671722432,
+        "narHash": "sha256-ojcZUekIQeOZkHHzR81st7qxX99dB1Eaaq6PU5MNeKc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "652e92b8064949a11bc193b90b74cb727f2a1405",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "Find-Billy": "Find-Billy",
+        "Lyrically-Vantage": "Lyrically-Vantage",
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
