@@ -107,6 +107,7 @@ main_menu = [
   {url="/accounts#contact", name="👋 Contact"},
   {url="/license", name="©️ License"},
   {url="https://codeberg.org/annaaurora/annaaurora.eu", name="📦 Source code", external=true},
+  {url="/atom.xml", name="Atom feed"},
 ]
 
 # Displayed as title of drop-down menu when size of main_menu > show_menu_items.

@@ -1,0 +1,60 @@
+{% import "macros/head.html" as head -%}
+{% import "macros/toc.html" as toc -%}
+{% extends "base.html" -%}
+
+{%- block math -%}
+  {% if page.extra.math %}
+  {{ head::katex() }}
+  {% endif %}
+{%- endblock math -%}
+
+{%- block title %}
+    <title>{{ page.title }}</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
+
+{%- block main -%}
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </h1>
+
+            {{ posts::meta(page=page) }}
+            {{ posts::langs(page=page) }}
+
+            {%- block toc -%}
+                {%- if page.extra.toc or config.extra.toc -%}
+                    {{ toc::toc(t=page.toc) }}
+                {%- endif -%}
+            {%- endblock toc -%}
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date installed</th>
+                    <th>Duration used</th>
+                    <th>Software</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for distro in page.extra.distros %}
+                    <tr>
+                        <td>{{ distro.date }}</td>
+                        <td>{{ distro.duration }}</td>
+                        <td>
+                            <a href="{{ distro.website }}">{{ distro.name }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {{ page.content | safe }}
+
+        {{ comments::comments() }}
+        {# TODO: Decide if any sort of commenting functionality is desired? #}
+        {#%- include "snippets/comments.html"  -%#}
+    </article>
+{%- endblock main -%}
