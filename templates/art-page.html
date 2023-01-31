@@ -53,7 +53,23 @@
                 </tr>
                 <tr>
                     {% if page.extra.imagery.software %}
-                        <td>{{ page.extra.imagery.software }}</td>
+                        <td>
+                            {% if page.extra.imagery.software == "Blender" %}
+                                <a href="https://blender.org">
+                                    {{ page.extra.imagery.software }}
+                                </a>
+                            {% elif page.extra.imagery.software == "GIMP" %}
+                                <a href="https://gimp.org">
+                                    {{ page.extra.imagery.software }}
+                                </a>
+                            {% elif page.extra.imagery.software == "Krita" %}
+                                <a href="https://krita.org">
+                                    {{ page.extra.imagery.software }}
+                                </a>
+                            {% else %}
+                                {{ page.extra.imagery.software }}
+                            {% endif %}
+                        </td>
                     {% endif %}
                     {% if page.extra.imagery.render_engine %}
                         <td>{{ page.extra.imagery.render_engine }}</td>
@@ -98,7 +114,15 @@
                 </tr>
                 <tr>
                     {% if page.extra.audio.software %}
-                        <td>{{ page.extra.audio.software }}</td>
+                        <td>
+                            {% if page.extra.audio.software == "LMMS" %}
+                                <a href="https://lmms.io">
+                                    {{ page.extra.audio.software }}
+                                </a>
+                            {% else %}
+                                {{ page.extra.audio.software }}
+                            {% endif %}
+                        </td>
                     {% endif %}
                 </tr>
             </table>
