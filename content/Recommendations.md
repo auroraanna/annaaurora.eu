@@ -7,7 +7,9 @@ updated = 2022-03-19T18:22:24+01:00
 +++
 ## Websites
 
-- [based.cooking](https://based.cooking)
+### Cooking recipes
+
+- Be aware that while the recipes on [Based.Cooking](https://based.cooking) seem fine, Luke Smith has very problematic political opinions about mental health, disability, …. He is a white supremacist and calls people normies and soydevs, like he's from 4chan.
 
 ## Operating systems
 
