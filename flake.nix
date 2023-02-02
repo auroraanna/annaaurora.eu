@@ -43,7 +43,6 @@
             # Let Zola compile the website and format HTML
             zola build
             for file in $(find public -name '*.html'); do
-              tidy -m --wrap 0 --indent true --indent-with-tabs false --indent-spaces 4 $file && echo "success"
               sed -i 's/    /	/g' $file
             done
             # Fix `atom.xml`

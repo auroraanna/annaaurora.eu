@@ -30,19 +30,29 @@
                 {%- endif -%}
             {%- endblock toc -%}
         </header>
-        <table>
+
+        {{ page.content | safe }}
+
+        <noscript>
+            <p class="important">Calculation of the column <i>Duration used</i> in the following table <strong>requires</strong> JavaScript. Please <strong>enable JavaScript</strong> to see the contents of that column.</p>
+        </noscript>
+
+        <table id="linux-journey">
             <thead>
                 <tr>
                     <th>Date installed</th>
-                    <th>Duration used</th>
-                    <th>Software</th>
+                    <th>Duration used (d)</th>
+                    <th>
+                        <abbr title="operating system">OS</abbr>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 {% for distro in page.extra.distros %}
                     <tr>
-                        <td>{{ distro.date }}</td>
-                        <td>{{ distro.duration }}</td>
+                        <td>{% if distro.date.installed.approximate %}≅{% else %}={% endif %}{{ distro.date.installed.value }}</td>
+                        <td>
+                        </td>
                         <td>
                             <a href="{{ distro.website }}">{{ distro.name }}</a>
                         </td>
@@ -50,8 +60,7 @@
                 {% endfor %}
             </tbody>
         </table>
-
-        {{ page.content | safe }}
+        <script src="duration-used.js"></script>
 
         {{ comments::comments() }}
         {# TODO: Decide if any sort of commenting functionality is desired? #}
