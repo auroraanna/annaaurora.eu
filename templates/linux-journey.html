@@ -50,7 +50,9 @@
             <tbody>
                 {% for distro in page.extra.distros %}
                     <tr>
-                        <td>{% if distro.date.installed.approximate %}≅{% else %}={% endif %}{{ distro.date.installed.value }}</td>
+                        <td>
+                            {% if distro.date.installed.approximate %}≅{% else %}={% endif %}{{ distro.date.installed.value }}
+                        </td>
                         <td>
                         </td>
                         <td>
