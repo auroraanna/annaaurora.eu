@@ -6,12 +6,12 @@ let i = 0;
 for (var row of rows) {
 	console.log('i:', i)
 
-	const dateInstalled = Date.parse(row.children[0].innerHTML.slice(1));
+	const dateInstalled = Date.parse(row.children[0].innerHTML.trim().slice(1));
 	let dateInstalledNext = 0;
 	if (i == (rows.length - 1)) {
 		dateInstalledNext = Date.now();
 	} else {
-		dateInstalledNext = Date.parse(rows[i + 1].children[0].innerHTML.slice(1));
+		dateInstalledNext = Date.parse(rows[i + 1].children[0].innerHTML.trim().slice(1));
 	};
 
 	const durationUsedMilsecs = (dateInstalledNext - dateInstalled);

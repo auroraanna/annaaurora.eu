@@ -43,10 +43,8 @@
             # Let Zola compile the website and format HTML
             zola build
             for file in $(find public -name '*.html'); do
-              tidy -m --wrap 0 --indent true --indent-with-tabs false --indent-spaces 4 $file && echo "success"
+              tidy -m --wrap 0 --indent true --indent-with-tabs false --indent-spaces 4 $file && echo "Formatted $file"
               sed -i 's/    /	/g' $file
-              sed -i --n -E 's/<td>\n*\t*/<td>/g' $file
-              sed -i --n -E 's/\n*\t*<\/td/<\/td/g' $file
             done
             # Fix `atom.xml`
             sed -i 's/href="\//href="https:\/\/annaaurora.eu\//g' public/atom.xml
