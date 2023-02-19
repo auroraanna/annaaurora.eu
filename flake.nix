@@ -58,7 +58,11 @@
             # Art section generate lossy images and generate audio
             for art_name in $(ls -1 public/art | awk '! /.html/'); do
               if [ -f "public/art/$art_name/lossless.webp" ]; then
-                convert public/art/$art_name/lossless.webp -quality 90% public/art/$art_name/lossy.webp
+                lossless_image="public/art/$art_name/lossless.webp"
+                quality="50%"
+                convert $lossless_image -quality $quality public/art/$art_name/lossy.avif
+                convert $lossless_image -quality $quality public/art/$art_name/lossy.webp
+                convert $lossless_image -quality $quality public/art/$art_name/lossy.jpeg
               fi
               if [ -f "public/art/$art_name/source.mmpz" ]; then
                 if [ $art_name != "lyrically-vantage" ]; then

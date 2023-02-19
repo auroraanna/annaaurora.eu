@@ -33,8 +33,12 @@
 
         {% if page.extra.imagery %}
             <p class="imagery">
+                <picture>
+                    <source srcset="lossy.avif" type="image/avif"/>
+                    <source srcset="lossy.webp" type="image/webp"/>
+                    <img src="lossy.jpeg">
+                </picture>
                 <a href="lossless.webp">
-                    <img src="lossy.webp">
                     Lossless image
                 </a>
             </p>
