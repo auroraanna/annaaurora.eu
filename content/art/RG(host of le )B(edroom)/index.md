@@ -7,6 +7,7 @@ tags = ["bedroom", "rgb-lights", "bokeh", "tower-pc", "curved-monitor", "gaming"
 categories = ["3d-art"]
 
 [extra.imagery]
+description = "A cutout of a bedroom. It is placed on a carbon fiber floor. The bedroom includes a wooden bed with a green mattress, a metal in, a dark wooden floor, a desk, windows, a door, a monitor with keyboard and mouse and a PC behind a cactus. There are also rainbow (RGB) light a the top of the room. On top of the bed, there is a white blanket floating with a sphere under it. On the wall, the AK47 artwork from the portfolio is framed."
 software = "Blender"
 render_engine = "Cycles"
 pbr_materials = "ambientCG"
