@@ -32,16 +32,18 @@
         </header>
 
         {% if page.extra.imagery %}
-            <p class="imagery">
-                <picture>
-                    <source srcset="lossy.avif" type="image/avif"/>
-                    <source srcset="lossy.webp" type="image/webp"/>
-                    <img src="lossy.jpeg" alt="{{ page.extra.imagery.description }}">
-                </picture>
-                <a href="lossless.webp">
-                    Lossless image
-                </a>
-            </p>
+            {% if not page.extra.imagery.custom_image_markup %}
+                <p class="imagery">
+                    <picture>
+                        <source srcset="lossy.avif" type="image/avif"/>
+                        <source srcset="lossy.webp" type="image/webp"/>
+                        <img src="lossy.jpeg" alt="{{ page.extra.imagery.description }}">
+                    </picture>
+                    <a href="lossless.webp">
+                        Lossless image
+                    </a>
+                </p>
+            {% endif %}
 
             <table class="technical-info">
                 <tr>

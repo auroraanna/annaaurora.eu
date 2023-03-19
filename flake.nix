@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    Lyrically-Vantage.url =
-      "https://codeberg.org/annaaurora/Lyrically-Vantage/archive/main.tar.gz";
+    Lyrically-Vantage.url = "https://codeberg.org/annaaurora/Lyrically-Vantage/archive/main.tar.gz";
+    Lettuce-Synthetic.url = "https://codeberg.org/annaaurora/Lettuce-Synthetic/archive/main.tar.gz";
     Find-Billy = {
       url =
         "tarball+https://codeberg.org/attachments/5f0815d4-2ff6-4795-bd8c-2e3534e10c4c";
@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, Lyrically-Vantage, Find-Billy }:
+  outputs = { self, nixpkgs, flake-utils, Lyrically-Vantage, Lettuce-Synthetic, Find-Billy }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
@@ -25,11 +25,13 @@
           src = self;
 
           nativeBuildInputs = with pkgs; [
+            exiftool
             zola
             html-tidy
             imagemagick
             lmms
             ffmpeg
+            xxHash
           ];
 
           buildPhase = ''
@@ -40,6 +42,8 @@
             # Replace big icon with big enough icon even for 2160x3840 500 phone screen.
             magick static/icon.jpeg -resize 160x160 static/icon.webp
             substituteInPlace config.toml --replace 'path = "icon.jpeg"' 'path = "icon.webp"'
+            # Lettuce Synthetic
+            sh lettuce-synthetic.sh ${Lettuce-Synthetic.packages.${system}.default}
             # Let Zola compile the website and format HTML
             zola build
             for file in $(find public -name '*.html'); do
@@ -55,24 +59,10 @@
             # Put Lyrically Vantage FLAC file into place.
             cp -v ${Lyrically-Vantage.packages.${system}.default}/"Lyrically Vantage.flac" public/art/lyrically-vantage/lossless.flac
             cp -v ${Lyrically-Vantage.packages.${system}.default}/"Lyrically Vantage.mmpz" public/art/lyrically-vantage/source.mmpz
-            # Art section generate lossy images and generate audio
-            for art_name in $(ls -1 public/art | awk '! /.html/'); do
-              if [ -f "public/art/$art_name/lossless.webp" ]; then
-                lossless_image="public/art/$art_name/lossless.webp"
-                quality="50%"
-                convert $lossless_image -quality $quality public/art/$art_name/lossy.avif
-                convert $lossless_image -quality $quality public/art/$art_name/lossy.webp
-                convert $lossless_image -quality $quality public/art/$art_name/lossy.jpeg
-              fi
-              if [ -f "public/art/$art_name/source.mmpz" ]; then
-                if [ $art_name != "lyrically-vantage" ]; then
-                  lmms render public/art/$art_name/source.mmpz --allowroot --format wav --loop --output public/art/$art_name/lossless.wav
-                  ffmpeg -i public/art/$art_name/lossless.wav public/art/$art_name/lossless.flac
-                  rm -f public/art/$art_name/lossless.wav
-                fi
-                ffmpeg -i public/art/$art_name/lossless.flac -b:a 160k public/art/$art_name/lossy.opus
-              fi
-            done
+            # Art section lossy media
+            sh lossy.sh
+            # Add checksum to every image URL for caching
+            sh checksums.sh
             # Delete error 404 page because the Caddy web server delivers the error 404 page from somewhere else.
             rm public/404.html
             # Update Find Billy!
