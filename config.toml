@@ -148,8 +148,9 @@ gender = "female"
 
 # Set a custom favicon. `path` starts in the `static` directory.
 [extra.favicon]
-type = "image/jpeg"
-path = "icon.jpeg"
+type = "image/webp"
+sizes = "160x160"
+href = "icon.webp"
 alt = "Blue-haired anime furry with choker and pullover on a blue background"
 
 # Gives the favicon in the top left of the website a margin.

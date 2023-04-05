@@ -41,7 +41,6 @@
             substituteInPlace config.toml --replace '$annaaurora.eu_out' "$out"
             # Replace big icon with big enough icon even for 2160x3840 500 phone screen.
             magick static/icon.jpeg -resize 160x160 static/icon.webp
-            substituteInPlace config.toml --replace 'path = "icon.jpeg"' 'path = "icon.webp"'
             # Lettuce Synthetic
             sh lettuce-synthetic.sh ${Lettuce-Synthetic.packages.${system}.default}
             # Let Zola compile the website and format HTML
