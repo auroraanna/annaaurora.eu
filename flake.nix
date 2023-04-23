@@ -72,7 +72,7 @@
 
           installPhase = ''
             mkdir -p $out
-            cp -vrf public/* $out/
+            cp -vrf public/. $out/
           '';
 
           meta = with lib; {
