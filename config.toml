@@ -26,11 +26,10 @@ feed_filename = "atom.xml"
 taxonomies = [
   {name = "tags", feed = true},
   {name = "categories", feed = true},
-  #{name = "authors", feed = true, paginate_by = 20},
 ]
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
 
 [markdown]
 # Whether to do syntax highlighting
@@ -105,7 +104,7 @@ main_menu = [
   {url="/find-billy/", name="🤖 Find Billy!"},
   {url="https://kaufkauflist.annaaurora.eu", name="🛒 kaufkauflist", external=true},
   {url="/webrings/", name="🪐 Webrings"},
-  {url="/accounts#contact", name="👋 Contact"},
+  {url="/contact", name="👋 Contact"},
   {url="/license", name="©️ License"},
   {url="https://codeberg.org/annaaurora/annaaurora.eu", name="📦 Source code", external=true},
   {url="/atom.xml", name="Atom feed"},
