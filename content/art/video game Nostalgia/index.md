@@ -2,6 +2,10 @@
 title = "video game Nostalgia"
 date = 2022-05-31T21:49:20+02:00
 
+[taxonomies]
+tags = [ "chiptune" ]
+categories = ["music"]
+
 [extra.audio]
 software = "LMMS"
 +++

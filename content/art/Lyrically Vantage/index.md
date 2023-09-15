@@ -2,6 +2,10 @@
 title = "Lyrically Vantage"
 date = 2022-12-14T23:24:05+01:00
 
+[taxonomies]
+tags = [ "cathedral-organ" ]
+categories = [ "music" ]
+
 [extra.audio]
 software = "LMMS"
 +++
