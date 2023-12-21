@@ -14,7 +14,7 @@ tags = ["contact", "GitLab", "GitHub", "Codeberg", "Keyoxide", "Email", "matrix"
 
 <address>
 
-A good way to contact me is [matrix](https://matrix.org/). Our messages will be end-to-end encrypted. My account is <a href="https://matrix.to/#/@papojari:artemislena.eu">@papojari:artemislena.eu</a>. Please don't register on matrix.org. It kind of defeats the decentralization. Instead have a look at [this list e.g.](https://github.com/techlore/faq-bot/blob/6c257e35c9033de7222be16528f3ab39a466b56a/faq.json#L10). I'm sure there's many more nice homeservers out there.
+A good way to contact me is [matrix](https://matrix.org/). Our messages will be end-to-end encrypted. My account is <a href="https://matrix.to/#/@annaaurora:artemislena.eu">@annaaurora:artemislena.eu</a>. Please don't register on matrix.org. It kind of defeats the decentralization. Instead have a look at [this list e.g.](https://github.com/techlore/faq-bot/blob/6c257e35c9033de7222be16528f3ab39a466b56a/faq.json#L10). I'm sure there's many more nice homeservers out there.
 
 </address>
 
