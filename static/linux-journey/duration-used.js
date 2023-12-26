@@ -15,7 +15,7 @@ for (var row of rows) {
 	};
 
 	const durationUsedMilsecs = (dateInstalledNext - dateInstalled);
-	const durationUsedDays = (durationUsedMilsecs / 1000 / 60 / 60 / 24);
+	const durationUsedDays = Math.trunc(durationUsedMilsecs / 1000 / 60 / 60 / 24);
 	row.children[1].innerHTML = durationUsedDays;
 
 	console.log('dateInstalled:', dateInstalled);
